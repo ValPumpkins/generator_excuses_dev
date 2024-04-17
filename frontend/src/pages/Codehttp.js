@@ -39,21 +39,21 @@ const Codehttp = () => {
     }
 
   return (
-      <div className="code-container">
-        <h1>HTTP Code ➡️ Code ✨ {http_code} ✨</h1>
-        <div className="excuse-container">
-          {excuse.length > 0 ? (
-            <ul>
-              {excuse.map((excuse, index) => (
-                <li key={index}>{excuse.message}</li>
-              ))}
-            </ul>
-          ) : (
-            <p>No excuses found for this HTTP code</p>
-          )}
-        </div>
+    <div className="code-container">
+      <h1 className="code-title">HTTP Code ✨ {http_code} ✨</h1>
+      <div className="excuse-container">
+        {excuse.length > 0 ? (
+          <ul>
+            {excuse.map((excuse, index) => (
+              <li key={index}>↪️ {excuse.message}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>☔️ Sorry, no excuses found for this HTTP code</p>
+        )}
       </div>
-      );
+    </div>
+  );
 };
 
 export default Codehttp;
