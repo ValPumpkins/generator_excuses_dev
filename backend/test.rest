@@ -1,0 +1,21 @@
+### List all excuses
+GET http://localhost:5000/api/excuses
+Content-Type: application/json
+
+{}
+
+### CREATE EXCUSE
+POST http://localhost:5000/api/create
+Content-Type: application/json
+
+{
+    "http_code": "208",
+    "tag": "Test-msg",
+    "message": "Petite verification"
+}
+
+### RANDOM EXCUSE
+GET http://localhost:5000/api/random
+Content-Type: application/json
+
+{}
