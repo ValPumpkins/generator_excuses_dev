@@ -1,4 +1,4 @@
-""" Script to load excuses in the database """
+""" Script to load given excuses in db """
 
 import sqlite3
 
@@ -80,6 +80,7 @@ excuses_data = [
     {"http_code": 798, "tag": "Internet crashed", "message": " I checked the db backups cupboard and the cupboard was bare"},
     {"http_code": 799, "tag": "Internet crashed", "message": " End of the world"},
 ]
+
 # Connect to db
 connection = sqlite3.connect('excuses.db')
 cursor = connection.cursor()
