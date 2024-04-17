@@ -56,9 +56,9 @@ def create_excuse():
 def random_excuse():
     """ API route to get a random excuse """
     excuse = get_random_excuse()
-    
+
     if excuse:
-        return jsonify(excuse=excuse), 200
+        return jsonify(excuse), 200
     else:
         return jsonify({'error': 'No excuses available'}), 404
 
