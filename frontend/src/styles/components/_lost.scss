@@ -1,0 +1,30 @@
+// CSS FOR LOST PAGE
+
+.lost-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.lost-text {
+	font-size: 6rem;
+	color: #282c34;
+	margin-bottom: 5rem;
+	text-align: center;
+}
+
+.lost-gif {
+	width: 800px;
+	height: auto;
+	border-radius: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+	@media screen and (max-width: 768px) {
+		max-width: 400px;
+	}
+	@media screen and (max-width: 576px) {
+		max-width: 350px;
+  }
+}

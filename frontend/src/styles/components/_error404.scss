@@ -1,0 +1,44 @@
+// CSS PAGE ERROR 404
+
+.error-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+}
+
+.overlay {
+	position: absolute;
+	max-width: 150%;
+	top: 53%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.error-text {
+	font-size: 52rem;
+	color: #e8bb17;
+
+	@media screen and (max-width: 768px) {
+			font-size: 20rem;
+	}
+	@media screen and (max-width: 576px) {
+			font-size: 12rem;
+	}
+}
+
+.notfound-text {
+	font-size: 7.6rem;
+	color: #787878;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+	@media screen and (max-width: 768px) {
+		font-size: 2rem;
+	}
+	@media screen and (max-width: 576px) {
+		font-size: 1.7rem;
+
+	}
+}
