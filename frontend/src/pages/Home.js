@@ -2,10 +2,14 @@
 
 import React from 'react';
 import ExcuseGenerator from '../components/ExcuseGenerator';
+import CreateExcuses from '../modals/CreateExcuses';
 
 const Home = () => {
   return (
-    <ExcuseGenerator />
+    <div>
+      <ExcuseGenerator />
+      <CreateExcuses />
+    </div>
   );
 };
 
