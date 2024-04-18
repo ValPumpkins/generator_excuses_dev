@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import RandomBtn from './RandomBtn';
 import axios from 'axios';
+import CreateExcuses from '../modals/CreateExcuses';
 
 const ExcuseGenerator = () => {
   const [excuses, setExcuses] = useState([]); // Excuses from the API
@@ -12,8 +13,7 @@ const ExcuseGenerator = () => {
   const [firstClick, setFirstClick] = useState(false); // Flag to track first click
   const [loading, setLoading] = useState(false); // Flag to track loading state
 
-  useEffect(() => {
-    // Retrieve excuses from the API when the component mounts
+  const updateExcuses = () => {
     axios
       .get('http://localhost:5000/api/excuses')
       .then((response) => {
@@ -22,7 +22,17 @@ const ExcuseGenerator = () => {
       .catch((error) => {
         console.error('Error fetching excuses:', error);
       });
+  };
+
+  useEffect(() => {
+    // Retrieve excuses from the API when the component mounts
+    updateExcuses();
   }, []);
+
+  // Update excuses when a new excuse is created
+  const handleExcuseCreated = () => {
+    updateExcuses();
+  };
 
   const generateExcuse = () => {
     console.log('Excuses:', excuses.length);
@@ -72,6 +82,7 @@ const ExcuseGenerator = () => {
       <div className="btn-container">
         <RandomBtn onClick={generateExcuse} />
       </div>
+      <CreateExcuses onExcuseCreated={handleExcuseCreated} />
     </div>
   );
 };
