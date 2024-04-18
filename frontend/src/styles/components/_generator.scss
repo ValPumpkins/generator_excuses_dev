@@ -6,11 +6,45 @@
 	font-weight: bold;
 	margin-bottom: 5rem;
 	text-align: center;
+	transition: font-size 0.5s ease, margin-bottom 0.5s ease;
+}
+.small-title {
+	font-size: 2rem;
+	margin-bottom: 8rem;
 }
 
 .excuse-gen {
 	font-size: 2rem;
-	color: #282c34;
+	color: #323439;
 	margin-bottom: 5rem;
 	text-align: center;
+	transition: font-size 1s ease-in, margin-bottom 0.5s ease;
+}
+.big-excuse p {
+	font-size: 3.5rem;
+}
+
+// Animation loader
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.loader-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+.loader {
+	border: 4px solid #f3f3f3;
+	border-top: 4px solid #6c6c6c;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	animation: spin 2s linear infinite;
+	margin-bottom: 5rem;
 }
