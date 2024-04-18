@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Logo from '../components/Logo';
 
 const Lost = () => {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ const Lost = () => {
 
   return (
     <div className="lost-container">
+      <Logo />
       <p className="lost-text">I'm lost</p>
       <img
         className="lost-gif"

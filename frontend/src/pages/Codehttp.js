@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Error404 from './Error404';
 import axios from 'axios';
+import Logo from '../components/Logo';
 
 const Codehttp = () => {
   const { http_code } = useParams();
@@ -13,8 +14,8 @@ const Codehttp = () => {
   useEffect(() => {
     const code = parseInt(http_code);
 
+    // Check if the code is a valid HTTP code
     if (isNaN(code) || code < 100 || code > 999) {
-      // Check if the code is a valid HTTP code
       setValidCode(false);
       return;
     }
@@ -40,6 +41,7 @@ const Codehttp = () => {
 
   return (
     <div className="code-container">
+      <Logo />
       <h1 className="code-title">HTTP Code ✨ {http_code} ✨</h1>
       <div className="excuse-container">
         {excuse.length > 0 ? (
