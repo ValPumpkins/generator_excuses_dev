@@ -2,7 +2,7 @@
 
 .create-modal {
 	position: fixed;
-	background: #a8a8a8c3;
+	background: #a8a8a8;
 	inset: 40px;
 	overflow: auto;
 	left: 50%;
@@ -14,6 +14,18 @@
 	outline: none;
 	padding: 20px;
 	text-align: center;
+}
+
+// Transition for the modal (open)
+.ReactModal__Overlay {
+	opacity: 0;
+	transition: opacity 1000ms ease-in-out;
+}
+.ReactModal__Overlay--after-open {
+	opacity: 1;
+}
+.ReactModal__Overlay--before-close {
+	opacity: 0;
 }
 
 .modal-h2 {
@@ -58,7 +70,7 @@
 }
 
 .form-btn {
-	background-color: #fd63f3c4;
+	background-color: #fa1a8e;
 	border: none;
 	border-radius: 10px;
 	color: #e9e9e9;
@@ -71,7 +83,7 @@
 	transition: background-color 0.3s, color 0.3s;
 }
 .form-btn:hover {
-	background-color: #d53fe0be;
+	background-color: #ad005a;
 	color: #ffffff;
 }
 
@@ -91,3 +103,4 @@
 .close-btn:hover {
 	color: #dadada;
 }
+
