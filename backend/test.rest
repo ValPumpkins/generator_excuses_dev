@@ -9,9 +9,8 @@ POST http://localhost:5000/api/create
 Content-Type: application/json
 
 {
-    "http_code": "208",
     "tag": "Test-msg",
-    "message": "Petite verification"
+    "message": "Test code http"
 }
 
 ### RANDOM EXCUSE
