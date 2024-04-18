@@ -1,15 +1,27 @@
 // CSS EXCUSES GENERATOR
 
-.title-gen {
+.excuse-generator {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.title-gen h1 {
 	color: #44444490;
 	font-size: 4.5rem;
 	font-weight: bold;
 	margin-bottom: 5rem;
 	text-align: center;
-	transition: font-size 0.5s ease, margin-bottom 0.5s ease;
+	animation: fade-in 2s forwards;
+	transform: translateY(-50px, -50%);
+	transition: font-size 0.8s ease, margin-bottom 0.8s ease;
 }
-.small-title {
-	font-size: 2rem;
+
+.title-gen.small-title h1 {
+	opacity: 1;
+	font-size: 1.2rem;
 	margin-bottom: 8rem;
 }
 
@@ -20,8 +32,24 @@
 	text-align: center;
 	transition: font-size 1s ease-in, margin-bottom 0.5s ease;
 }
+
 .big-excuse p {
 	font-size: 3.5rem;
+}
+
+.empty-msg {
+	margin: 3rem;
+	animation: fade-in 5s ease-in;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
 // Animation loader
@@ -29,16 +57,19 @@
 	0% {
 		transform: rotate(0deg);
 	}
+
 	100% {
 		transform: rotate(360deg);
 	}
 }
+
 .loader-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100%;
+	height: 100px;
 }
+
 .loader {
 	border: 4px solid #f3f3f3;
 	border-top: 4px solid #6c6c6c;

@@ -9,9 +9,12 @@ const ExcuseGenerator = () => {
   const [excuses, setExcuses] = useState([]); // Excuses from the API
   const [excuse, setExcuse] = useState(''); // Random excuse
   const [usedExcuses, setUsedExcuses] = useState([]);
-  const [empty] = useState('Need an excuse ? We\'ve got you 🫵'); // Empty state, before first click
+  const [empty] = useState("Need an excuse ? We've got you 🫵"); // Empty state, before first click
   const [firstClick, setFirstClick] = useState(false); // Flag to track first click
   const [loading, setLoading] = useState(false); // Flag to track loading state
+  const [showButtonRandom, setShowButtonRandom] = useState(false); // Track if button should be shown
+  const [showButtonModal, setShowButtonModal] = useState(false); // Track if button should be shown
+
 
   const updateExcuses = () => {
     axios
@@ -23,6 +26,22 @@ const ExcuseGenerator = () => {
         console.error('Error fetching excuses:', error);
       });
   };
+
+  useEffect(() => {
+    // Trigger button appearance and title animation after 2 seconds
+    const timer = setTimeout(() => {
+      setShowButtonRandom(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    // Trigger button appearance and title animation after 2 seconds
+    const timer = setTimeout(() => {
+      setShowButtonModal(true);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     // Retrieve excuses from the API when the component mounts
@@ -67,22 +86,26 @@ const ExcuseGenerator = () => {
 
   return (
     <div className={`excuse-generator ${firstClick ? 'first-click' : ''}`}>
-      <h1 className={`title-gen ${firstClick ? 'small-title' : ''}`}>
-        Les excuses de dev
-      </h1>
-      <div className='loader-container'>
+      <div className={`title-gen ${firstClick ? 'small-title' : ''}`}>
+        <h1>
+          {firstClick ? '- excuses de dev -' : 'Les excuses de dev'}
+        </h1>
+      </div>
+      <div className="loader-container">
         {loading ? (
           <div className="loader"></div>
         ) : (
           <div className={`excuse-gen ${firstClick ? 'big-excuse' : ''}`}>
-            {excuse ? <p>{excuse.message}</p> : <p>{empty}</p>}
+            {excuse ? <p>{excuse.message}</p> : <p className='empty-msg'>{empty}</p>}
           </div>
         )}{' '}
       </div>
-      <div className="btn-container">
+      <div className={`btn-container ${showButtonRandom ? 'show' : ''}`}>
         <RandomBtn onClick={generateExcuse} />
       </div>
-      <CreateExcuses onExcuseCreated={handleExcuseCreated} />
+      <div className={`btn-container ${showButtonModal ? 'show' : ''}`}>
+        <CreateExcuses onExcuseCreated={handleExcuseCreated} />
+      </div>
     </div>
   );
 };
