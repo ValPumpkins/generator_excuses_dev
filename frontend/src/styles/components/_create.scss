@@ -1,0 +1,95 @@
+// CSS for the modal create component
+
+.create-modal {
+	position: fixed;
+	background: #717171c3;
+	inset: 40px;
+	// border: 1px solid rgb(204, 204, 204);
+	overflow: auto;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: 370px;
+	border-radius: 10px;
+	outline: none;
+	padding: 20px;
+	text-align: center;
+}
+
+.modal-h2 {
+	color: white;
+	font-size: 2rem;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.create-form {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.create-form input,
+.create-form select {
+	font-size: 1rem;
+	color: #333333c3;
+	padding: 10px;
+	border-radius: 10px;
+	border: none;
+	height: 50px;
+}
+
+// Select fields Arrow
+.create-form select {
+	appearance: none;
+	background-image:
+		linear-gradient(45deg, transparent 50%, gray 50%),
+		linear-gradient(135deg, gray 50%, transparent 50%),
+		radial-gradient(#ddd 70%, transparent 72%);
+	background-position:
+		calc(100% - 35px) calc(1.2em + 3px),
+		calc(100% - 25px) calc(1.2em + 3px),
+		calc(100% - 1.2em) .6em;
+	background-size:
+		10px 10px,
+		10px 10px,
+		2em 2em;
+	background-repeat: no-repeat;
+}
+
+.form-btn {
+	background-color: #fd63f3c4;
+	border: none;
+	border-radius: 10px;
+	color: #e9e9e9;
+	cursor: pointer;
+	font-size: 1.4rem;
+	margin: 0.5rem;
+	padding: 0.8rem;
+	text-align: center;
+	text-decoration: none;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s, color 0.3s;
+}
+.form-btn:hover {
+	background-color: #d53fe0be;
+	color: #ffffff;
+}
+
+.close-btn {
+	position: absolute;
+	top: 15px;
+	right: 18px;
+	background: none;
+	border: none;
+	padding: 0;
+	font-size: 18px;
+	color: #666;
+	cursor: pointer;
+	outline: none;
+}
+
+.close-btn:hover {
+	color: #dadada;
+}

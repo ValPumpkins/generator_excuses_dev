@@ -1,0 +1,23 @@
+// CSS for the modal button component
+
+.modalbtn-container {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.modalbtn {
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	padding: 15px 20px;
+	margin: 10px;
+	cursor: pointer;
+	border-radius: 10px;
+	font-size: 1.4rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.modalbtn:hover {
+	background-color: #45a049;
+}
