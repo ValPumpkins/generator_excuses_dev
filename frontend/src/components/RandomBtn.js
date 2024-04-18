@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 
 const RandomBtn = ({ onClick }) => {
-  const [clickedOnce, setClickedOnce] = useState(false); // State to track if the button has been clicked once
+  const [clickedOnce, setClickedOnce] = useState(false); // Track if the button has been clicked once
 
   // Text for the button based on the clickedOnce state
   const buttonText = clickedOnce ? 'Another excuse ?' : "Let's get started !";

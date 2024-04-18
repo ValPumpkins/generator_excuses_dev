@@ -1,4 +1,4 @@
-""" Script to load given excuses in db """
+""" Script to load given excuses in db for the first time """
 
 import sqlite3
 

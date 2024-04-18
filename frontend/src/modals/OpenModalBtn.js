@@ -1,3 +1,5 @@
+// Button to open the modal
+
 import React from 'react';
 
 const OpenModalBtn = ({ onClick }) => {

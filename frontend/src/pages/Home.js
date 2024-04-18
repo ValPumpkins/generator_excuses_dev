@@ -1,4 +1,4 @@
-// MAIN HOME PAGE (with the excuse generator)
+// MAIN HOME PAGE
 
 import React from 'react';
 import ExcuseGenerator from '../components/ExcuseGenerator';
