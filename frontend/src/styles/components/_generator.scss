@@ -9,7 +9,7 @@
 }
 
 .title-gen h1 {
-	color: #44444490;
+	color: rgb(221, 221, 221);
 	font-size: 4.5rem;
 	font-weight: bold;
 	margin-bottom: 5rem;
@@ -27,7 +27,7 @@
 
 .excuse-gen {
 	font-size: 2rem;
-	color: #323439;
+	color: #f6f6f6;
 	margin-bottom: 5rem;
 	text-align: center;
 	transition: font-size 1s ease-in, margin-bottom 0.5s ease;
@@ -46,7 +46,6 @@
 	0% {
 		opacity: 0;
 	}
-
 	100% {
 		opacity: 1;
 	}
@@ -57,7 +56,6 @@
 	0% {
 		transform: rotate(0deg);
 	}
-
 	100% {
 		transform: rotate(360deg);
 	}
