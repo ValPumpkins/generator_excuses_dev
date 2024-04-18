@@ -33,9 +33,10 @@ def all_excuses():
 def create_excuse():
     """ API route to add a new excuse to the db """
     data = request.json
-    http_code = data.get('http_code')
     tag = data.get('tag')
     message = data.get('message')
+
+    http_code = 100
 
     # Check if all datas are present
     if http_code is None or tag is None or message is None:
@@ -44,12 +45,23 @@ def create_excuse():
     db = get_db()
     cursor = db.cursor()
 
-    # Insert the new excuse in the db
-    cursor.execute('INSERT INTO excuses (http_code, tag, message) VALUES (?, ?, ?)',
-                    (http_code, tag, message))
-    db.commit()
+    # Check if the tag is already used
+    while True:
+        cursor.execute(
+            'SELECT * FROM excuses WHERE http_code = ?', (http_code,))
+        existing_excuse = cursor.fetchone()
 
-    return jsonify({'message': 'Success !'}), 201
+        # If http_code is already used, increment it
+        if existing_excuse:
+            http_code += 1
+        else:
+            # Insert the new excuse in the db
+            cursor.execute('INSERT INTO excuses (http_code, tag, message) VALUES (?, ?, ?)',
+                           (http_code, tag, message))
+            db.commit()
+
+            return jsonify({'message': 'Success !'}), 201
+
 
 # Get a random excuse
 @app.route('/api/random', methods=['GET'])
