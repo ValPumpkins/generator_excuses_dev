@@ -74,6 +74,7 @@ const CreateExcuses = ({ onExcuseCreated }) => {
         contentLabel="Create a new excuse"
         className="create-modal"
         closeTimeoutMS={900}
+        style={{ overlay: { background: 'rgba(75, 75, 75, 0.85)' } }}
       >
         <button className="close-btn" onClick={() => setModalIsOpen(false)}>
           X
