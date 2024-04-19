@@ -10,7 +10,7 @@ Content-Type: application/json
 
 {
     "tag": "Test-msg",
-    "message": "Test code http"
+    "message": "A new excuse will be created"
 }
 
 ### RANDOM EXCUSE
