@@ -11,7 +11,7 @@ You can find the deployed project by clicking on the link below :
 
 **[valentine.electrikbox.fr](http://valentine.electrikbox.fr/)**
 
-You can also install it locally by following these steps
+You can also install it locally by following these steps :
 
 ## 🏠 LOCAL INSTALLATION
 
@@ -66,7 +66,7 @@ API routes are available on your http://localhost:5000/
 
 For example : http://localhost:5000/api/excuses will show a list of all the excuses available in the database and http://localhost:5000/api/random will give you a random excuse each time you refresh the page.
 
-If you want to test http://localhost:5000/api/create (route to create a new excuse), you can go to the `test.rest` file and click on *Send a request* on the second example (you can change the excuse if you want, the excuse will be saved in the db)
+If you want to test http://localhost:5000/api/create (route to create a new excuse), you can go to the `test.rest` file (assuming you have the *REST Client* extension installed in VSCode)and click on *Send a request* on the second example (you can change the excuse if you want, the excuse will be saved in the db)
 
 ### 🪞 Frontend
 Now, you can move to the frontend file :
@@ -90,7 +90,7 @@ On the **Main page** :
 - http://localhost:3000/ or
 - http://valentine.electrikbox.fr/
 
-you can perform two actions: click on the 🌺 **pink button** and randomly browse through new excuses, or click on the 🟢 **green button** and create a brand new excuse of your own (the newly created excuse is immediately available)
+you can perform two actions : click on the 🌺 **pink button** and randomly browse through excuses, or click on the 🟢 **green button** and create a brand new excuse of your own (the newly created excuse is immediately available)
 
 On the **Lost page** :
 - http://localhost:3000/lost or
