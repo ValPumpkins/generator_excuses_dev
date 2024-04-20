@@ -24,7 +24,6 @@ const CreateExcuses = ({ onExcuseCreated }) => {
     "Somebody Else's Problem",
     'Internet crashed',
     'Others',
-    'Test-msg',
   ];
 
   const handleSubmit = async (e) => {
