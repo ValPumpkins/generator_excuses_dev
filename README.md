@@ -53,15 +53,8 @@ pip install -r requirements.txt
 **Note** : to close your virtual environement : `deactivate`
 
 #### 🗂️ Database
-You can now create the database used for this project (via <img src="https://i.imgur.com/EisNrxL.png" alt="sqlite logo" width="50" height="20" /> SQLite) and insert some data in it,
-Go to db file :
-```
-cd db
-```
-and launch the utility file :
-```
-python load_db_excuses.py
-```
+The database used for this project has been createtd using <img src="https://i.imgur.com/EisNrxL.png" alt="sqlite logo" width="50" height="30" /> **SQLite** and can be found in the `db` directory
+
 #### 🚀 **LAUNCH SERVER**
 
 Finally, launch the **Flask server** with this command :
